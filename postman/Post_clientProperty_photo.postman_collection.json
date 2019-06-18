@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ed84ed9d-3f3b-4ec4-ae4e-cc54abe6012e",
+		"_postman_id": "fa861351-5db7-4491-bf77-ae5f0c40bcb1",
 		"name": "Post_clientProperty_photo",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -54,12 +54,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{LCLROOT}}clientProperty/photo",
 									"host": [
 										"{{LCLROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -102,12 +101,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{LCLROOT}}clientProperty/photo",
 									"host": [
 										"{{LCLROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -150,12 +148,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{LCLROOT}}clientProperty/photo",
 									"host": [
 										"{{LCLROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -205,12 +202,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{LCLROOT}}clientProperty/photo",
 									"host": [
 										"{{LCLROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -259,12 +255,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{LCLROOT}}clientProperty/photo",
 									"host": [
 										"{{LCLROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -313,12 +308,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{LCLROOT}}clientProperty/photo",
 									"host": [
 										"{{LCLROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -369,12 +363,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{LCLROOT}}clientProperty/photo",
 									"host": [
 										"{{LCLROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -426,12 +419,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{LCLROOT}}clientProperty/photo",
 									"host": [
 										"{{LCLROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -466,7 +458,7 @@
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+									"src": "/Users/vaithy/Documents/GitHub/MumTechResearchLab/postman/sample_apple_image.png"
 								},
 								{
 									"key": "store_id",
@@ -476,12 +468,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+							"raw": "{{LCLROOT}}clientProperty/photo",
 							"host": [
 								"{{LCLROOT}}clientProperty"
 							],
 							"path": [
-								"{{ID_1}}",
 								"photo"
 							]
 						}
@@ -539,12 +530,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{TSTROOT}}clientProperty/photo",
 									"host": [
 										"{{TSTROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -587,12 +577,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{TSTROOT}}clientProperty/photo",
 									"host": [
 										"{{TSTROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -635,12 +624,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{TSTROOT}}clientProperty/photo",
 									"host": [
 										"{{TSTROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -690,12 +678,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{TSTROOT}}clientProperty/photo",
 									"host": [
 										"{{TSTROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -744,12 +731,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{TSTROOT}}clientProperty/photo",
 									"host": [
 										"{{TSTROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -798,12 +784,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{TSTROOT}}clientProperty/photo",
 									"host": [
 										"{{TSTROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -854,12 +839,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{TSTROOT}}clientProperty/photo",
 									"host": [
 										"{{TSTROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -911,12 +895,11 @@
 									]
 								},
 								"url": {
-									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"raw": "{{TSTROOT}}clientProperty/photo",
 									"host": [
 										"{{TSTROOT}}clientProperty"
 									],
 									"path": [
-										"{{ID_1}}",
 										"photo"
 									]
 								}
@@ -961,12 +944,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+							"raw": "{{TSTROOT}}clientProperty/photo",
 							"host": [
 								"{{TSTROOT}}clientProperty"
 							],
 							"path": [
-								"{{ID_1}}",
 								"photo"
 							]
 						}
