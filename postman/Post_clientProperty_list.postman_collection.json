@@ -1,0 +1,3225 @@
+{
+	"info": {
+		"_postman_id": "d1ee9ece-ac25-4d0f-86c4-bcfc123fcc68",
+		"name": "Post_clientProperty_list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local_Env",
+			"item": [
+				{
+					"name": "requestValidation MaxLength",
+					"item": [
+						{
+							"name": "Failure:requestValidation MaxLength: size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"size\", 00003);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: store_id",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", \"000000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: sale_status",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"sale_status\", 003);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: property_name",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"property_name\", \"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: postal_code_first",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"postal_code_first\", \"00001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: postal_code_last",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"postal_code_last\", \"000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: address",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"address\", \"000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "requestValidation String",
+					"item": [
+						{
+							"name": "Failure:requestValidation String: store_id",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation String: property_name",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"property_name\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation String: postal_code_first",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"postal_code_first\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation String: postal_code_last",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"postal_code_last\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation String: address",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"address\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "requestValidation Integer",
+					"item": [
+						{
+							"name": "Failure:requestValidation Integer: size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"size\", \"Check\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Integer: page_no",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"page_no\", \"Check\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Integer: sale_status",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"sale_status\", \"Check\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "responseValidation FormatCheck",
+					"item": [
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].id",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.id whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].id is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].id)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].status_label",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.status_label whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].status_label is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].status_label)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].name",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.name whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].name is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].name)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].sale_house_num",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.sale_house_num whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].sale_house_num is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].sale_house_num)).to.equal(true);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].total_house_num",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.total_house_num whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].total_house_num is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].total_house_num)).to.equal(true);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].price_text",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.price_text whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].price_text is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].price_text)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].postal_code",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.postal_code whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].postal_code is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].postal_code)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].address",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.address whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].address is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].address)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].sale_status",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.sale_status whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].sale_status is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].sale_status)).to.equal(true);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].sale_status_text",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.sale_status_text whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].sale_status_text is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].sale_status_text)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].store_name",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.store_name whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].store_name is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].store_name)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].score",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.score whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].score is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].score)).to.equal(true);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].release_at",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.release_at whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].release_at is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].release_at)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].release_user",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.release_user whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].release_user is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].release_user)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].created_at",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.created_at whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].created_at is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].created_at)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].create_user",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.create_user whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].create_user is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].create_user)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].updated_at",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.updated_at whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].updated_at is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].updated_at)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].update_user",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.update_user whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].update_user is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].update_user)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: found",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the found whether number or String",
+											"pm.test(\"sucess response: found is a Number\", function() {",
+											"    pm.expect(Number.isInteger(jsondata.found)).to.equal(true);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: start",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the start whether number or String",
+											"pm.test(\"sucess response: start is a Number\", function() {",
+											"    pm.expect(Number.isInteger(jsondata.start)).to.equal(true);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "responseValidation Required",
+					"item": [
+						{
+							"name": "MandatoryCheck: found",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the found whether null or not",
+											"pm.test(\"sucess response: found not null\", function () {",
+											"    pm.expect(jsondata.found).not.eql(null);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MandatoryCheck: start",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the start whether null or not",
+											"pm.test(\"sucess response: start not null\", function () {",
+											"    pm.expect(jsondata.start).not.eql(null);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/list",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SuccessCase",
+					"event": [
+						{
+							"script": {
+								"id": 0,
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Success POST request\", function() {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);",
+									"});"
+								]
+							},
+							"listen": "test"
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+						},
+						"url": {
+							"raw": "{{LCLROOT}}clientProperty/list",
+							"host": [
+								"{{LCLROOT}}clientProperty"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test_Env",
+			"item": [
+				{
+					"name": "requestValidation MaxLength",
+					"item": [
+						{
+							"name": "Failure:requestValidation MaxLength: size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"size\", 00003);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: store_id",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", \"000000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: sale_status",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"sale_status\", 003);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: property_name",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"property_name\", \"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: postal_code_first",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"postal_code_first\", \"00001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: postal_code_last",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"postal_code_last\", \"000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation MaxLength: address",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"address\", \"000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "requestValidation String",
+					"item": [
+						{
+							"name": "Failure:requestValidation String: store_id",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation String: property_name",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"property_name\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation String: postal_code_first",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"postal_code_first\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation String: postal_code_last",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"postal_code_last\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation String: address",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"address\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "requestValidation Integer",
+					"item": [
+						{
+							"name": "Failure:requestValidation Integer: size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"size\", \"Check\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Integer: page_no",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"page_no\", \"Check\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Integer: sale_status",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"sale_status\", \"Check\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "responseValidation FormatCheck",
+					"item": [
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].id",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.id whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].id is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].id)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].status_label",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.status_label whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].status_label is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].status_label)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].name",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.name whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].name is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].name)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].sale_house_num",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.sale_house_num whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].sale_house_num is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].sale_house_num)).to.equal(true);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].total_house_num",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.total_house_num whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].total_house_num is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].total_house_num)).to.equal(true);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].price_text",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.price_text whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].price_text is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].price_text)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].postal_code",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.postal_code whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].postal_code is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].postal_code)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].address",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.address whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].address is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].address)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].sale_status",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.sale_status whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].sale_status is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].sale_status)).to.equal(true);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].sale_status_text",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.sale_status_text whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].sale_status_text is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].sale_status_text)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].store_name",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.store_name whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].store_name is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].store_name)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].score",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.score whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].score is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].score)).to.equal(true);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].release_at",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.release_at whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].release_at is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].release_at)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].release_user",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.release_user whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].release_user is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].release_user)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].created_at",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.created_at whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].created_at is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].created_at)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].create_user",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.create_user whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].create_user is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].create_user)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].updated_at",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.updated_at whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].updated_at is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].updated_at)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: hit[].update_user",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"if (jsondata.hit.length != 0) {",
+											"    for (var i = 0; i < jsondata.hit.length; i++ ) {",
+											"        // check the hit.update_user whether number or String",
+											"        pm.test(\"sucess response: hit[\"+ i +\"].update_user is either String or null\", function() {",
+											"            pm.expect(Number.isInteger(jsondata.hit[i].update_user)).to.equal(false);",
+											"            });",
+											"    }",
+											"} else {",
+											"    // Check jichome[] wether empty or not. ",
+											"    pm.test(\"Response: hit[] is empty\", function () {",
+											"        pm.expect(jsondata.hit.length).is.eql(0);",
+											"    });",
+											"}"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: found",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the found whether number or String",
+											"pm.test(\"sucess response: found is a Number\", function() {",
+											"    pm.expect(Number.isInteger(jsondata.found)).to.equal(true);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Success Case:responseValidation FormatCheck: start",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the start whether number or String",
+											"pm.test(\"sucess response: start is a Number\", function() {",
+											"    pm.expect(Number.isInteger(jsondata.start)).to.equal(true);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "responseValidation Required",
+					"item": [
+						{
+							"name": "MandatoryCheck: found",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the found whether null or not",
+											"pm.test(\"sucess response: found not null\", function () {",
+											"    pm.expect(jsondata.found).not.eql(null);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MandatoryCheck: start",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the start whether null or not",
+											"pm.test(\"sucess response: start not null\", function () {",
+											"    pm.expect(jsondata.start).not.eql(null);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/list",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SuccessCase",
+					"event": [
+						{
+							"script": {
+								"id": 0,
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Success POST request\", function() {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);",
+									"});"
+								]
+							},
+							"listen": "test"
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n\t\"size\" : 100,\n\t\"page_no\" : 1,\n\t\"store_id\" : \"IM00001\",\n\t\"sale_status\": 0,\n\t\"property_name\" : \"野村不動産\",\n\t\"postal_code_first\" : \"108\",\n\t\"postal_code_last\" : \"0075\",\n\t\"address\" : \"東京都\"\n}"
+						},
+						"url": {
+							"raw": "{{TSTROOT}}clientProperty/list",
+							"host": [
+								"{{TSTROOT}}clientProperty"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

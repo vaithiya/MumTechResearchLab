@@ -1,0 +1,979 @@
+{
+	"info": {
+		"_postman_id": "ed84ed9d-3f3b-4ec4-ae4e-cc54abe6012e",
+		"name": "Post_clientProperty_photo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local_Env",
+			"item": [
+				{
+					"name": "requestValidation Required",
+					"item": [
+						{
+							"name": "Failure:requestValidation Required(null): image",
+							"event": [
+								{
+									"script": {
+										"id": "4f3d4609-9403-4286-8632-0c324a3b56b7",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"image\", null);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Required: image",
+							"event": [
+								{
+									"script": {
+										"id": "ab5d67c7-18e0-4ddb-a121-5a8dc6f18259",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"image\", \"\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Required(null): store_id",
+							"event": [
+								{
+									"script": {
+										"id": "f16437f3-a76e-4001-9411-ed504b7359a5",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", null);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Required: store_id",
+							"event": [
+								{
+									"script": {
+										"id": "b57869ab-e8ad-4c6a-a3be-cdbf3ce2bf33",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", \"\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "requestValidation MaxLength",
+					"item": [
+						{
+							"name": "Failure:requestValidation MaxLength: store_id",
+							"event": [
+								{
+									"script": {
+										"id": "c708e8cd-4277-4df1-835e-0297fbd4d90f",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", \"000000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "requestValidation String",
+					"item": [
+						{
+							"name": "Failure:requestValidation String: store_id",
+							"event": [
+								{
+									"script": {
+										"id": "afd80cca-3281-4a98-9b62-7eb3ddc7dead",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "responseValidation",
+					"item": [
+						{
+							"name": "FormatCheck: image_key",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the image_key whether number or String",
+											"pm.test(\"sucess response: image_key is a String\", function() {",
+											"    pm.expect(Number.isInteger(jsondata.image_key)).to.equal(false);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MandatoryCheck: image_key",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the image_key whether null or not",
+											"pm.test(\"sucess response: image_key is not null\", function () {",
+											"    pm.expect(jsondata.image_key).not.eql(null);",
+											"});",
+											"",
+											"// check the image_key whether empty or not",
+											"if (null != jsondata.image_key) {",
+											"    pm.test(\"sucess response: image_key is not empty\", function () {",
+											"        pm.expect(jsondata.image_key.trim()).not.eql(\"\");",
+											"    });",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{LCLROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SuccessCase",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+								"exec": [
+									"pm.test(\"Success POST request\", function() {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+								},
+								{
+									"key": "store_id",
+									"value": "IM00001",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{LCLROOT}}clientProperty/{{ID_1}}/photo",
+							"host": [
+								"{{LCLROOT}}clientProperty"
+							],
+							"path": [
+								"{{ID_1}}",
+								"photo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test_Env",
+			"item": [
+				{
+					"name": "requestValidation Required",
+					"item": [
+						{
+							"name": "Failure:requestValidation Required(null): image",
+							"event": [
+								{
+									"script": {
+										"id": "4f3d4609-9403-4286-8632-0c324a3b56b7",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"image\", null);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Required: image",
+							"event": [
+								{
+									"script": {
+										"id": "ab5d67c7-18e0-4ddb-a121-5a8dc6f18259",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"image\", \"\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Required(null): store_id",
+							"event": [
+								{
+									"script": {
+										"id": "f16437f3-a76e-4001-9411-ed504b7359a5",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", null);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Failure:requestValidation Required: store_id",
+							"event": [
+								{
+									"script": {
+										"id": "b57869ab-e8ad-4c6a-a3be-cdbf3ce2bf33",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", \"\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "requestValidation MaxLength",
+					"item": [
+						{
+							"name": "Failure:requestValidation MaxLength: store_id",
+							"event": [
+								{
+									"script": {
+										"id": "c708e8cd-4277-4df1-835e-0297fbd4d90f",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", \"000000001\");",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "requestValidation String",
+					"item": [
+						{
+							"name": "Failure:requestValidation String: store_id",
+							"event": [
+								{
+									"script": {
+										"id": "afd80cca-3281-4a98-9b62-7eb3ddc7dead",
+										"exec": [
+											"pm.test(\"Failure POST request\", function() {",
+											"    pm.environment.set(\"store_id\", 10.0000);",
+											"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+											"});"
+										],
+										"type": "text/javascript"
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "responseValidation",
+					"item": [
+						{
+							"name": "FormatCheck: image_key",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the image_key whether number or String",
+											"pm.test(\"sucess response: image_key is a String\", function() {",
+											"    pm.expect(Number.isInteger(jsondata.image_key)).to.equal(false);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MandatoryCheck: image_key",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56604e70-9ff1-48ff-b51b-909e76142621",
+										"exec": [
+											"var jsondata = JSON.parse(responseBody);",
+											"",
+											"// check the image_key whether null or not",
+											"pm.test(\"sucess response: image_key is not null\", function () {",
+											"    pm.expect(jsondata.image_key).not.eql(null);",
+											"});",
+											"",
+											"// check the image_key whether empty or not",
+											"if (null != jsondata.image_key) {",
+											"    pm.test(\"sucess response: image_key is not empty\", function () {",
+											"        pm.expect(jsondata.image_key.trim()).not.eql(\"\");",
+											"    });",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+										},
+										{
+											"key": "store_id",
+											"value": "IM00001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+									"host": [
+										"{{TSTROOT}}clientProperty"
+									],
+									"path": [
+										"{{ID_1}}",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SuccessCase",
+					"event": [
+						{
+							"script": {
+								"id": "8b8eabc2-520a-4973-a855-f47195b1464a",
+								"exec": [
+									"pm.test(\"Success POST request\", function() {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);",
+									"});"
+								],
+								"type": "text/javascript"
+							},
+							"listen": "test"
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "store_id",
+									"value": "IM00001",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Vaithiyanadhan/Music/sample_apple_image.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{TSTROOT}}clientProperty/{{ID_1}}/photo",
+							"host": [
+								"{{TSTROOT}}clientProperty"
+							],
+							"path": [
+								"{{ID_1}}",
+								"photo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
