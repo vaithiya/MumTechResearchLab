@@ -4,7 +4,6 @@ import org.json.simple.JSONArray;
 
 import java.math.BigDecimal;
 
-import org.json.JSONException;
 import org.json.simple.JSONObject;
 
 public class JsonTestCaseFormate {
@@ -13,7 +12,7 @@ public class JsonTestCaseFormate {
 	
 	@SuppressWarnings("unchecked")
 	public JSONObject createTestCaseForRequired(JSONObject jobj, int caseId, String caseTypeAndkey, int caseType, String keyName,
-			String value, String methodType, String urlEnvironment) throws JSONException {
+			String value, String methodType, String urlEnvironment) {
 
 		// Event body
 		JSONArray eventArray = new JSONArray();
@@ -40,7 +39,7 @@ public class JsonTestCaseFormate {
 		if (caseType == 8) {
 			caseJson.put("name", "SuccessCase");
 		} else {
-			caseJson.put("name", "Failure:" + caseTypeAndkey +": "+ keyName);
+			caseJson.put("name", "FailureCase: " + caseTypeAndkey + keyName);
 		}
 		return caseJson;
 
@@ -59,7 +58,7 @@ public class JsonTestCaseFormate {
 	}
 
 	@SuppressWarnings("unchecked")
-	private JSONObject scriptJson(int caseType, String keyName, String value, int caseId) throws JSONException {
+	private JSONObject scriptJson(int caseType, String keyName, String value, int caseId) {
 		JSONObject scriptJson = new JSONObject();
 		
 		scriptJson.put("type", "text/javascript");
@@ -74,7 +73,7 @@ public class JsonTestCaseFormate {
 	}
 
 	@SuppressWarnings("unchecked")
-	private JSONObject urlSettingParam(String urlEnvironment) throws JSONException {
+	private JSONObject urlSettingParam(String urlEnvironment) {
 		JSONObject urlJsonBody = new JSONObject();
 		JSONArray urlArray = new JSONArray();
 		urlArray.add(0, urlEnvironment);
@@ -84,7 +83,7 @@ public class JsonTestCaseFormate {
 	}
 
 	@SuppressWarnings("unchecked")
-	private JSONObject requestSettingParam(JSONObject jobj, String methodType, int caseType, String key, String value) throws JSONException {
+	private JSONObject requestSettingParam(JSONObject jobj, String methodType, int caseType, String key, String value) {
 		JSONObject requestJsonBody = new JSONObject();
 		if ( caseType == 0) {
 			jobj.replace(key, value);
@@ -117,7 +116,7 @@ public class JsonTestCaseFormate {
 	}
 
 	@SuppressWarnings("unchecked")
-	private JSONArray getJsonCase(int caseType, String keyName, String value) throws JSONException {
+	private JSONArray getJsonCase(int caseType, String keyName, String value) {
 		JSONArray caseArray = new JSONArray();
 		int i = 0;
 		caseArray.add(i, "pm.test(\"Failure POST request\", function() {");
@@ -142,7 +141,7 @@ public class JsonTestCaseFormate {
 	}
 	
 	@SuppressWarnings("unchecked")
-	private JSONArray getJsonForSuccessCase() throws JSONException {
+	private JSONArray getJsonForSuccessCase()  {
 		JSONArray caseArray = new JSONArray();
 		caseArray.add(0, "pm.test(\"Success POST request\", function() {");
 		caseArray.add(1, "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);");
