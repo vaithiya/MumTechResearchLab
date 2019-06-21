@@ -1,0 +1,3913 @@
+{
+	"info": {
+		"_postman_id": "1c628a16-c0de-4ea1-893c-96def971f6a8",
+		"name": "post_property_findByDtlCond",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local_Env",
+			"item": [
+				{
+					"name": "RequestValidation Required",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation Required(null): size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":null,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Required(null): start",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":null,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "RequestValidation MaxLength",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation MaxLength: size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":100003,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: sort",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":1003,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: price_unset_include",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1003,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: walk_time_bus_include",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1003,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: has_photo",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1003,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: num_of_years",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10003,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: reform",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1003,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "RequestValidation String",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation String: cursor",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":10.0000,\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation String: keyword",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":10.0000,\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation String: area",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":10.0000,\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "RequestValidation Integer",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation Integer: size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":\"Check\",\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: start",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":\"Check\",\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: sort",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":\"Check\",\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: price_low",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":\"Check\",\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: price_high",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":\"Check\",\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: price_unset_include",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":\"Check\",\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: land_area_low",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":\"Check\",\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: land_area_high",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":\"Check\",\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: building_area_low",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":\"Check\"\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: building_area_high",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":\"Check\",\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: walk_time_high",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":\"Check\",\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: walk_time_bus_include",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":\"Check\",\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: has_photo",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":\"Check\",\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: entering",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":\"Check\",\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: num_of_years",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":\"Check\",\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: reform",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":\"Check\",\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "RequestValidation ArrayFormat",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: madori",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":\"[s,\n        w,\n        21]\",\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: site_right_leasehold_type",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":\"[s,\n        w,\n        21]\",\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: station_conveniene",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":\"[s,\n        w,\n        21]\",\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: floor_num",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":\"[s,\n        w,\n        21]\",\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: information_disclosure_date",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":\"[s,\n        w,\n        21]\",\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: lighting_ventication",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":\"[s,\n        w,\n        21]\",\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: character_madori",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":\"[s,\n        w,\n        21]\",\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: kitchen_concerned_facilities",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":\"[s,\n        w,\n        21]\",\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: parking",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":\"[s,\n        w,\n        21]\",\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: surroundings",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":\"[s,\n        w,\n        21]\",\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{LCLROOT}}property/findByDtlCond",
+									"host": [
+										"{{LCLROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SuccessCase",
+					"event": [
+						{
+							"script": {
+								"id": 0,
+								"type": "text/javascript",
+								"exec": [
+									"if (1 < request.data.length){",
+									"    tests[\"RequestBody: \"+ request.data ] = true;",
+									"} else {",
+									"    tests[\"RequestBody: empty\" ] = true;",
+									"}",
+									"",
+									"if (responseCode.code != 200) {",
+									"    tests[\"Response: \" + responseBody] = false;",
+									"    tests[\"response failed \"] = false;",
+									"    ",
+									"} else {",
+									"    tests[\"Response: \" + responseBody] = true;",
+									"    tests[\"response returned successfully\"] = true;",
+									"}",
+									"",
+									"tests[\"status = \" + responseCode.code] = responseCode.code === 200;"
+								]
+							},
+							"listen": "test"
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"name": "Content-Type",
+								"type": "text",
+								"value": "appapplication/json;charset=UTF-8",
+								"key": "Content-Type"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+						},
+						"url": {
+							"raw": "{{LCLROOT}}property/findByDtlCond",
+							"host": [
+								"{{LCLROOT}}property"
+							],
+							"path": [
+								"findByDtlCond"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test_Env",
+			"item": [
+				{
+					"name": "RequestValidation Required",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation Required(null): size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":null,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Required(null): start",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":null,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "RequestValidation MaxLength",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation MaxLength: size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":100003,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: sort",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":1003,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: price_unset_include",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1003,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: walk_time_bus_include",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1003,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: has_photo",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1003,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: num_of_years",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10003,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation MaxLength: reform",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1003,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "RequestValidation String",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation String: cursor",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":10.0000,\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation String: keyword",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":10.0000,\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation String: area",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":10.0000,\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "RequestValidation Integer",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation Integer: size",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":\"Check\",\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: start",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":\"Check\",\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: sort",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":\"Check\",\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: price_low",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":\"Check\",\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: price_high",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":\"Check\",\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: price_unset_include",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":\"Check\",\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: land_area_low",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":\"Check\",\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: land_area_high",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":\"Check\",\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: building_area_low",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":\"Check\"\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: building_area_high",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":\"Check\",\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: walk_time_high",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":\"Check\",\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: walk_time_bus_include",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":\"Check\",\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: has_photo",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":\"Check\",\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: entering",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":\"Check\",\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: num_of_years",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":\"Check\",\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation Integer: reform",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":\"Check\",\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "RequestValidation ArrayFormat",
+					"item": [
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: madori",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":\"[s,\n        w,\n        21]\",\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: site_right_leasehold_type",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":\"[s,\n        w,\n        21]\",\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: station_conveniene",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":\"[s,\n        w,\n        21]\",\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: floor_num",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":\"[s,\n        w,\n        21]\",\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: information_disclosure_date",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":\"[s,\n        w,\n        21]\",\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: lighting_ventication",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":\"[s,\n        w,\n        21]\",\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: character_madori",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":\"[s,\n        w,\n        21]\",\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: kitchen_concerned_facilities",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":\"[s,\n        w,\n        21]\",\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: parking",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":\"[s,\n        w,\n        21]\",\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FailureCase: RequestValidation ArrayFormat: surroundings",
+							"event": [
+								{
+									"script": {
+										"id": 0,
+										"type": "text/javascript",
+										"exec": [
+											"if (1 < request.data.length){",
+											"    tests[\"RequestBody: \"+ request.data ] = true;",
+											"} else {",
+											"    tests[\"RequestBody: empty\" ] = true;",
+											"}",
+											"",
+											"tests[\"Response: \" + responseBody] = true;",
+											"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+											"",
+											"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+										]
+									},
+									"listen": "test"
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"type": "text",
+										"value": "appapplication/json;charset=UTF-8",
+										"key": "Content-Type"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":\"[s,\n        w,\n        21]\",\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+								},
+								"url": {
+									"raw": "{{TSTROOT}}property/findByDtlCond",
+									"host": [
+										"{{TSTROOT}}property"
+									],
+									"path": [
+										"findByDtlCond"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SuccessCase",
+					"event": [
+						{
+							"script": {
+								"id": 0,
+								"type": "text/javascript",
+								"exec": [
+									"if (1 < request.data.length){",
+									"    tests[\"RequestBody: \"+ request.data ] = true;",
+									"} else {",
+									"    tests[\"RequestBody: empty\" ] = true;",
+									"}",
+									"",
+									"if (responseCode.code != 200) {",
+									"    tests[\"Response: \" + responseBody] = false;",
+									"    tests[\"response failed \"] = false;",
+									"    ",
+									"} else {",
+									"    tests[\"Response: \" + responseBody] = true;",
+									"    tests[\"response returned successfully\"] = true;",
+									"}",
+									"",
+									"tests[\"status = \" + responseCode.code] = responseCode.code === 200;"
+								]
+							},
+							"listen": "test"
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"name": "Content-Type",
+								"type": "text",
+								"value": "appapplication/json;charset=UTF-8",
+								"key": "Content-Type"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"cursor\":\"VegKzpYYQW9JSVFFRU1UeWwwZERBd09EUTNPRGM9ZA\",\n        \"parking\":[3],\n        \"walk_time_bus_include\":1,\n        \"surroundings\":[11],\n        \"information_disclosure_date\":[1,\n        3],\n        \"price_low\":1000,\n        \"has_photo\":1,\n        \"madori\":[0],\n        \"land_area_low\":50,\n        \"keyword\":\"渋谷近辺\",\n        \"price_high\":9000,\n        \"building_area_high\":100,\n        \"land_area_high\":100,\n        \"character_madori\":[3],\n        \"num_of_years\":10,\n        \"area\":\"港区\",\n        \"price_unset_include\":1,\n        \"station_conveniene\":[1,\n        3],\n        \"floor_num\":[1,\n        3],\n        \"start\":0,\n        \"sort\":0,\n        \"site_right_leasehold_type\":[0,\n        1],\n        \"walk_time_high\":15,\n        \"lighting_ventication\":[1],\n        \"reform\":1,\n        \"entering\":0,\n        \"size\":50,\n        \"kitchen_concerned_facilities\":[3],\n        \"building_area_low\":50\n}"
+						},
+						"url": {
+							"raw": "{{TSTROOT}}property/findByDtlCond",
+							"host": [
+								"{{TSTROOT}}property"
+							],
+							"path": [
+								"findByDtlCond"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
