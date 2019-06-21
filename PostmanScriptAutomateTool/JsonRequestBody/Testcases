@@ -1,0 +1,31 @@
+FailureCase
+************
+"if (1 < request.data.length){",
+"    tests[\"RequestBody: \"+ request.data ] = true;",
+"} else {",
+"    tests[\"RequestBody: empty\" ] = true;",
+"}",
+"",
+"tests[\"Response: \" + responseBody] = true;",
+"tests[\"response failed due to invalid request. Expected status: 400\"] = responseCode.code === 400;",
+"",
+"tests[\"status = \" + responseCode.code] = responseCode.code === 400;"
+
+SuccessCase
+***********
+"if (1 < request.data.length){",
+"    tests[\"RequestBody: \"+ request.data ] = true;",
+"} else {",
+"    tests[\"RequestBody: empty\" ] = true;",
+"}",
+"",
+"if (responseCode.code != 200) {",
+"    tests[\"Response: \" + responseBody] = false;",
+"    tests[\"response failed \"] = false;",
+"    ",
+"} else {",
+"    tests[\"Response: \" + responseBody] = true;",
+"    tests[\"response returned successfully\"] = true;",
+"}",
+"",
+"tests[\"status = \" + responseCode.code] = responseCode.code === 200;"
